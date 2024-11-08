@@ -17,8 +17,7 @@ on:
 jobs:
   echo_the_color:
     runs-on: ubuntu-latest
-
-  steps:
-    - run: echo "You chose the color ${{github.event.inputs.color}}
+    steps:
+      - run: echo "You chose the color ${{github.event.inputs.color}}"
 
 
