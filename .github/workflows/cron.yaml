@@ -1,0 +1,24 @@
+name: testing-cron
+on:
+  workflow-dispatch:
+    inputs:
+      color:
+        type: choice
+        description: Choose a color
+        default: red
+        options:
+          - red
+          - green
+          - blue
+
+  schedule:
+    - cron: '0/15 * * * *'
+
+jobs:
+  echo_the_color:
+    runs-on: ubuntu-latest
+
+  steps:
+    - run: echo "You chose the color ${{github.event.inputs.color}}
+
+
