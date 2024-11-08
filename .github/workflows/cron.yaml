@@ -1,6 +1,6 @@
 name: testing-cron
 on:
-  workflow-dispatch:
+  workflow_dispatch:
     inputs:
       color:
         type: choice
